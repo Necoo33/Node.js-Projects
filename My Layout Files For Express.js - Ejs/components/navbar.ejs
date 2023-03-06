@@ -6,8 +6,41 @@
     <div class="buttons">
         <a href="/">Home</a>
         <a href="#">Button 2</a>
-        <a href="#">Button 3</a>
-        <a href="#">Button 4</a>
-        <a href="#">Button 5</a>
+
+        <div class="ddmenu">
+            <a href="#" class="ddmenu-button">Dropdown Menu</a>
+            
+            <div class="ddlist">
+                <a href="#">Button 1</a>
+                <a href="#">Button 2</a>
+                <a href="#">Button 3</a>
+                <a href="#">Button 4</a>
+            </div>
+        </div>
+
     </div>
 </nav>
+
+<script>
+    let ddmenu = document.querySelector(".ddmenu");
+    let ddmenuButton = document.querySelector(".ddmenu-button");
+    let ddlist = document.querySelector(".ddlist");
+
+    ddmenu.addEventListener("mouseover", function(){
+        ddlist.style.scale = "1";
+    });
+
+    ddmenu.addEventListener("mouseout", function(){
+        ddlist.style.scale = "0";
+    });
+
+    ddmenuButton.addEventListener("pointerdown", function(){
+        if(ddlist.style.scale === "0"){
+            ddlist.style.scale === "1"
+        } 
+
+        if(ddlist.style.scale === "1"){
+            ddlist.style.scale === "0"
+        }
+    })
+</script>
