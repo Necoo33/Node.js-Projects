@@ -11,18 +11,36 @@
     gap: 10px;
 }
 
-.buttons a{
+.buttons a, .ddmenu-button, .ddlist a{
     display: block;
     text-decoration: none;
     color: white;
     text-align: center;
     border-radius: 20px;
     padding: 1em 0;
-    width: 7em;
+    width: 8em;
     background-color: black;
 }
 
 .buttons a:hover{
     background-color: white;
     color: black;
+}
+
+/* Dropdown Menu Styles */
+
+.ddmenu{
+    position: relative;
+}
+
+.ddlist{
+    position: absolute;
+    transition: 0.3s;
+    transform-origin: top;
+    scale: 0;
+}
+
+.ddlist a{
+    display: block;
+    margin: 5px 0;
 }
